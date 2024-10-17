@@ -91,63 +91,11 @@
       <button onclick="goBack()">Go Back</button>
     </div>
 
-    <!-- <script>
-        const subcategoryData = {
-            anatomy: ["Set-1", "Set-2", "Set-3","Set-4","Set-5","Set-6"],
-            science: ["Physics", "Chemistry", "Biology"],
-            history: ["Ancient", "Medieval", "Modern"],
-            geography: ["Continents", "Countries", "Cities"],
-            sports: ["Football", "Tennis", "Cricket"],
-            art: ["Renaissance", "Modern", "Baroque"]
-        };
-
-        // Get the category from the URL
-        const params = new URLSearchParams(window.location.search);
-        const category = params.get('category');
-
-        const subcategoryTitle = document.getElementById('subcategory-title');
-        const subcategoryContainer = document.getElementById('subcategory-container');
-
-        // Display the subcategory title based on the category
-        subcategoryTitle.innerText = `${category.charAt(0).toUpperCase() + category.slice(1)} Subcategories`;
-
-        // Function to display subcategories as boxes
-        function loadSubcategories() {
-            if (subcategoryData[category]) {
-                subcategoryData[category].forEach(subcat => {
-                    const subcatBox = document.createElement('div');
-                    subcatBox.classList.add('category-box');
-                    subcatBox.innerHTML = `
-                        <img src="${category}.jpg" alt="${subcat}">
-                        <span>${subcat}</span>
-                    `;
-                    subcatBox.onclick = function () {
-                        startQuiz(category, subcat);
-                    };
-                    subcategoryContainer.appendChild(subcatBox);
-                });
-            } else {
-                subcategoryContainer.innerHTML = "<p>No subcategories available for this category.</p>";
-            }
-        }
-
-        // Function to start the quiz (redirect to quiz page with category and subcategory)
-        function startQuiz(category, subcategory) {
-            window.location.href = `quiz.html?category=${category}&subcategory=${subcategory}`;
-        }
-
-        // Function to go back to the category selection page
-        function goBack() {
-            window.location.href = 'index.html';
-        }
-
-        // Load the subcategories for the selected category
-        loadSubcategories();
-    </script> -->
 
     <script>
       const subcategoryData = {
-        anatomy: ["Set-1", "Set-2", "Set-3", "Set-4", "Set-5", "Notes"],
+        anatomy: ["Set-1", "Set-2", "Set-3", "Set-4", "Set-5","Set-6","Set-7","Set-8","Set-9",
+        "Notes"],
         science: ["Physics", "Chemistry", "Biology"],
         history: ["Ancient", "Medieval", "Modern"],
         geography: ["Continents", "Countries", "Cities"],
@@ -162,6 +110,10 @@
         "Set-3": "images/number-3.png",
         "Set-4": "images/number-4.png",
         "Set-5": "images/number-5.png",
+        "Set-6": "images/number-6.png",
+        "Set-7": "images/number-7.png",
+        "Set-8": "images/number-8.png",
+        "Set-9": "images/number-9.png",
         Notes: "images/pdf.png",
         // Add other images as needed
       };

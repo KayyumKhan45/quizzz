@@ -12,19 +12,28 @@
     <div class="container">
         <h1>Quiz Results</h1>
         <div id="result"></div>
+        <div id="time"></div>
+        <br> <!-- Add this to display time taken -->
         <button onclick="restartQuiz()">Restart Quiz</button>
     </div>
 
     <script>
-        // Get the score and total number of questions from the URL
+        // Get the score, total number of questions, and time taken from the URL
         const params = new URLSearchParams(window.location.search);
         const score = parseInt(params.get('score'), 10);  // Parse score as an integer
         const total = parseInt(params.get('total'), 10);  // Parse total as an integer
+        const time = params.get('time'); // Get time taken from URL
 
         const resultDiv = document.getElementById('result');
+        const timeDiv = document.getElementById('time');
 
         // Display the score
         resultDiv.innerText = `You scored ${score} out of ${total}`;
+
+        // Display the time taken
+        if (time !== null) {
+            timeDiv.innerText = `Time taken: ${time} seconds`;
+        }
 
         // Calculate the percentage score
         const percentage = (score / total) * 100;
